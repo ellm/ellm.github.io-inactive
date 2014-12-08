@@ -1,0 +1,49 @@
+div.page {
+    @include container;
+    // @include susy-grid-background;
+    margin-top: $gutter-width;
+}
+
+header[role="banner"] {
+    clear: both;
+    h2 {
+        margin: 0;
+    }
+    figure.headshot img{
+        zoom: 1;
+        filter: alpha(opacity=25);
+        opacity: 0.25;
+        &:hover {
+            filter: alpha(opacity=1);
+            opacity: 1;
+        }
+        .csstransitions & {
+            @include transition-property(opacity);
+            @include transition-duration(2s);
+        }
+        .borderradius & {
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+        }
+    }
+}
+
+section > h2 {
+    margin-bottom: 0;
+}
+
+section > p {
+    margin-top: 0;
+}
+
+section.primary {
+    @include word-wrap;
+}
+
+footer.page-footer {
+    clear: both;
+    p {
+        @include font-size(12);
+        color: #0f2033;
+    }
+}

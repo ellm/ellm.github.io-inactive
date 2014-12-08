@@ -1,0 +1,95 @@
+/* =Color 
+-------------------------------------------------------------- */
+body {
+    background-color: $nightblue;
+    color: #fff;
+}
+
+/* =Typography 
+-------------------------------------------------------------- */
+body {
+    font-family: $base-font-family;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6,p,li {
+    @include font-size(14);
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+a {
+    @include link-set($base-link-color, $base-link-color, $base-hover-link-color, $base-active-link-color);
+        &:hover {text-decoration: none;}
+}
+
+blockquote {
+    margin:1em .5em;
+    font-style:oblique;
+    & p:before {
+        content:'“ ';
+    }
+    & p:after {
+        content:' ”';
+    }
+    footer {
+        > p {
+            text-align: right;
+        }
+        > p:before {
+            content: "– ";
+        }
+
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 0;
+
+    li {
+        header[role="banner"] & {
+            margin-bottom: .75em;
+            &:before {
+                content: "> "
+            }
+        }
+    }
+}
+
+/* =Form Elements
+-------------------------------------------------------------- */
+
+label {
+    margin-top: 1em;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 98%;
+    padding: .25em; // line height does not compute in FF
+}
+select,
+input[type="checkbox"], 
+input[type="radio"] {
+    display: inline-block;
+}
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    clear: both;
+    margin: 1em 0;
+}
+
+.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+    @include button(#ccc);
+}

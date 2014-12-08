@@ -1,0 +1,33 @@
+/* =Typography
+-------------------------------------------------------------- */
+// $base-font-family:               "Lucida Grande", Verdana, Arial, san serif;
+$base-font-family:               Georgia, serif;
+
+
+/* =Colors
+-------------------------------------------------------------- */        
+$drkblue:                        #0f2033;
+$nightblue:                      #263f5e;
+$brightblue:                     #4c9eff;
+
+/* =Links
+-------------------------------------------------------------- */
+$base-link-color:                $brightblue;
+$base-visited-link-color:        $brightblue;
+$base-hover-link-color:          #000;
+$base-active-link-color:         #000;
+
+/* =Susy Grid
+-------------------------------------------------------------- */
+$total-columns:                  13;
+$column-width:                   3.75em; //60px 
+$gutter-width:                   1.25em; //20px
+$grid-padding:                   $gutter-width;
+
+// Correct box model 
+@include border-box-sizing;
+
+// Brakepoints
+// $small:                          10em;
+// $medium:                         20em;
+// $large:                          40em;
